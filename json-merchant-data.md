@@ -23,7 +23,7 @@ The BIP 70 specification provides for an optional merchant data field in the Pay
 | ------------ | ------------------------------------------|
 | merchant_data | Arbitrary data that may be used by the merchant to identify the PaymentRequest. May be omitted if the merchant does not need to associate Payments with PaymentRequest or if they associate each PaymentRequest with a separate payment address. |
 
-This field is unused in the wild yet it is recognized and readable by all existing clients which implement BIP 70. The merchant_data field is protocol buffer ``bytes`` data type. The JSON string representin gth eobject is UTF-8 encoded and converted to the appropriate data type for insertion into the merchant_data field.
+This field is unused in the wild yet it is recognized and readable by all existing clients which implement BIP 70. The merchant_data field is protocol buffer ``bytes`` data type. The JSON string representing the object is UTF-8 encoded and converted to the appropriate data type for insertion into the merchant_data field.
 
 #### Merchant Data Object Properties
 
