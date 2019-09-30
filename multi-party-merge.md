@@ -17,7 +17,7 @@ This payment protocol is an extension of [BIP 70](https://github.com/bitcoin/bip
 
 ### Multi-Party Transactions
 
-There is a challenge to funding script contracts that have multiple parties (such as escrow scripts) in a trustless manner. Although each party can broadcast a separate transaction to fund the contract, generally represented as a Pay-To-Script-Hash (P2SH) address, this scenario greatly increases the chance that one or more parties will not transmit their transaction. In such a scenario, all parties would still be able to collect the escrow, should the terms be met in their favor, including a party who did not contribute to funding the escrow. By using an extended version of BIP70, a party in the transaction or a third party (such as an "escrow agent") can collect partial, invalid transactions from each party and merge them together into a single valid transaction with multiple inputs.
+There is a challenge to funding script contracts that have multiple parties (such as escrow scripts) in a trustless manner. Although each party can broadcast a separate transaction to fund the contract, generally represented as a Pay-To-Script-Hash (P2SH) address, this scenario greatly increases the chance that one or more parties will not transmit their transaction. In such a scenario, all parties would still be able to collect the escrow, should the terms be met in their favor, including a party who did not contribute to funding the escrow. By using an extended version of BIP70, a party in the transaction or a third party (such as an "escrow agent") can collect partial, invalid transactions (*"fragments"*) from each party and merge them together into a single valid transaction with multiple inputs.
 
 #### Invalid Transaction Fragments
 
@@ -41,7 +41,7 @@ This ensures that the merged transaction will have sufficient mining fees.
 
 #### Precise Outputs
 
-Because this protocol allows for completely blind contract funding and parties are permitted to sign all outputs with ``SIGHASH_ALL``, this necessarily means that all fragments must contain exactly the same outputs in the exact same order to ensure all fragments can be merged into a single transaction. This necessarily means **additional change outputs are not permitted** to be added to fragments. Any fragments with additional outputs or outputs in an order other than that specified in the Payment Request will be rejected.
+Because this protocol allows for completely blind contract funding and parties are permitted to sign all outputs with ``SIGHASH_ALL``, all fragments must contain exactly the same outputs in the exact same order to ensure all fragments can be merged into a single transaction. This necessarily means **additional change outputs are not permitted** to be added to fragments. Any fragments with additional outputs or outputs in an order other than that specified in the Payment Request will be rejected.
 
 In order to facilitate precise outputs, it is likely that a given party's wallet will need to create an unspent transaction output (UTXO) for use in the fragment. The easiest means of doing this is to spend the amount that will be needed for the fragment into a UTXO at the same address (with change at a change address), broadcasting that transaction to the blockchain, and then using that resulting UTXO as the input for the fragment.
 
