@@ -35,6 +35,12 @@ The default object, representing no additional wallet instructions, is an empty 
 
 **``contract``** - Object representing terms of a script contract
 
+**``fiat_symbol``** - String of the three-letter currency code representing fiat currency in which invoice is meant to be denominated
+
+**``fiat_rate``** - Float representing Fiat/Bitcoin excahnge rate. This can be used to override the exchange rate of a wallet or to show the comparative exchange rate to the buyer
+
+**``fiat_amount``** - Float representing invoice amount denominated in ``fiat_symbol``
+
 
 **Example Merchant Data Object**
 ```
