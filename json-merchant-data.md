@@ -33,7 +33,7 @@ The default object, representing no additional wallet instructions, is an empty 
 
 **``anyonecanpay``** - Boolean representing whether all inputs in the submitted payment must be of signature hash type ``SIGHASH_ANYONECANPAY``
 
-**``contract``** - Object representing terms of a script contract
+**``contract``** - Object (or array of objects) representing terms of a script contract(s)
 
 **``fiat_symbol``** - String of the three-letter currency code representing fiat currency in which invoice is meant to be denominated
 
