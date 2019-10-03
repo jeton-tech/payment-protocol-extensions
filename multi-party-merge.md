@@ -7,7 +7,7 @@
 
 ## Purpose
 
-This specification describes an extension to the Bitcoin Payment Protocol (BIP70) which leverages the SIGHASH_ANYONECANPAY signature hash flag to combine two or more partial transactions, from separate parties, into a single transaction. This protocol is useful for "blind" funding of complex script contracts by multiple parties
+This specification describes an extension to the Bitcoin Payment Protocol (BIP70) which leverages the SIGHASH_ANYONECANPAY signature hash flag to combine two or more partial transactions, from separate parties, into a single transaction. This protocol is useful for "blind" funding of complex script contracts by multiple parties.
 
 ## Specification
 
