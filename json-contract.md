@@ -7,7 +7,7 @@
 
 ## Purpose
 
-This specification describes an extension to the JSON Merchant Data specification and defines a structure for the representation of advanced multi-party script contracts. The purpose of this specification is to create a standard allowing parties to independently verify contract terms before committing to funding and to be able to produce the necessary unlocking script (scriptSig) to spend a contract output
+This specification describes an extension to the JSON Merchant Data specification and defines a structure for the representation of advanced multi-party script contracts. The purpose of this specification is to create a standard allowing parties to independently verify contract terms before committing to funding and to be able to produce the necessary unlocking script (scriptSig) to spend a contract output.
 
 ### Multi-Party Contracts
 
