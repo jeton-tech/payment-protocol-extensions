@@ -1,6 +1,6 @@
 ![Jeton](images/logo-200.png)
 
-# JSON Merchant Data Contract Protocol
+# JSON Merchant Data Contract
 
 #### Version: 0.1
 #### Date published: October 3, 2019
