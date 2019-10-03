@@ -33,7 +33,7 @@ The default object, representing no additional wallet instructions, is an empty 
 
 **``anyonecanpay``** - Boolean representing whether all inputs in the submitted payment must be of signature hash type ``SIGHASH_ANYONECANPAY``
 
-**``contract``** - Object (or array of objects) representing terms of a script contract(s)
+**``contract``** - Object (or array of objects) representing terms of a script contract(s). The specification for this property is defined in the [JSON Merchant Data Contract Protocol](https://github.com/jeton-tech/payment-protocol-extensions/blob/master/json-contract.md)
 
 **``fiat_symbol``** - String of the three-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency code representing fiat currency in which invoice is meant to be denominated
 
