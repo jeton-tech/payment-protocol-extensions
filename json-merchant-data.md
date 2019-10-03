@@ -48,7 +48,7 @@ The default object, representing no additional wallet instructions, is an empty 
   "exact_amount": 13000,
   "anyonecanpay": true,
   "contract": {
-                "compiler": "jeton",
+                "compiler": "jeton-lib",
                 "version": "e001",
                 "refereePubKey":"0252d464cde7e046c7a38fdbedceda0038329ec00a87a16400d506c1806a53603d",
                 "parties": 
