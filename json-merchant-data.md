@@ -63,7 +63,7 @@ The default object, representing no additional wallet instructions, is an empty 
                     "message":"player2wins",
                     "amount":12000,
                     "index":1,
-                  "address":"bitcoincash:qpaqwcmsdtn0na94m4ztaqvez5lasafxzuyx8e67yd"
+                    "address":"bitcoincash:qpaqwcmsdtn0na94m4ztaqvez5lasafxzuyx8e67yd"
                   }
                ]
               },
