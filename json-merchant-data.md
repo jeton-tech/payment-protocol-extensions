@@ -27,7 +27,7 @@ This field is unused in the wild yet it is recognized and readable by all existi
 
 #### Merchant Data Object Properties
 
-The default object, representing no additional wallet instructions, is an empty object.
+The default object, representing no additional wallet instructions, is an empty object. All properties are optional, however, if ``fiat_rate`` is used, it must be accompanied by a valid ``fiat_symbol``.
 
 **``exact_amount``** - Integer representing the exact number of satoshis that the payee must send, in addition to the minimum required mining fee, in order for the payment to be accepted as valid. If ``exact_amount`` property is present in the merchant data object, then change outputs are not allowed. Any payment that does not have the exact outputs, in the exact order, specified in the PaymentDetails will be rejected as invalid.
 
@@ -35,19 +35,21 @@ The default object, representing no additional wallet instructions, is an empty 
 
 **``contract``** - Object (or array of objects) representing terms of a script contract(s)
 
-**``fiat_symbol``** - String of the three-letter currency code representing fiat currency in which invoice is meant to be denominated
+**``fiat_symbol``** - String of the three-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency code representing fiat currency in which invoice is meant to be denominated
 
-**``fiat_rate``** - Float representing Fiat/Bitcoin excahnge rate. This can be used to override the exchange rate of a wallet or to show the comparative exchange rate to the buyer
+**``fiat_rate``** - Float *(as String for JSON compatibility)* representing Fiat/Bitcoin exchange rate. This can be used to override the exchange rate of a wallet or to show the comparative exchange rate to the buyer
 
-**``fiat_amount``** - Float representing invoice amount denominated in ``fiat_symbol``
+**``fiat_amount``** - Float *(as String for JSON compatibility)* representing total invoice amount (or ``exact_amount``, if present) denominated in ``fiat_symbol``
 
 
 **Example Merchant Data Object**
 ```
  {
-  "exact_amount": 25000,
+  "exact_amount": 13000,
   "anyonecanpay": true,
   "contract": {
+                "compiler": "jeton",
+                "version": "e001",
                 "refereePubKey":"0252d464cde7e046c7a38fdbedceda0038329ec00a87a16400d506c1806a53603d",
                 "parties": 
                 [
@@ -64,6 +66,9 @@ The default object, representing no additional wallet instructions, is an empty 
                   "address":"bitcoincash:qpaqwcmsdtn0na94m4ztaqvez5lasafxzuyx8e67yd"
                   }
                ]
-              }
+              },
+  "fiat_symbol": "USD",
+  "fiat_rate": "300.21",
+  "fiat_amount": ".04"
 }
 ```
