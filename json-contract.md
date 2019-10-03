@@ -37,7 +37,7 @@ All other included properties correspond to the required arguments that are pass
 
 #### Example
 
-The original [jeton-lib](https://github.com/jeton-tech/jeton-lib/blob/master/lib/escrow/OutputScript.js) escrow contract (`version` e001) requires that an object is passed to it containing a *refereePubKey* property as well as a *parties* property consisting of an array of objects, each of which has a *message* and *pubKey* (or *address*) property.
+The original [jeton-lib escrow contract](https://github.com/jeton-tech/jeton-lib/blob/master/lib/escrow/OutputScript.js) (`version` e001) requires that an object is passed to it containing a *refereePubKey* property as well as a *parties* property consisting of an array of objects, each of which has a *message* and *pubKey* (or *address*) property.
 
 A minimum valid example Contract Object for this escrow contract would appear as follows:
 
